@@ -26,7 +26,7 @@ module Admin::TableHelper
           when :belongs_to then        html << typus_table_belongs_to_field(key, item)
           when :tree then              html << typus_table_tree_field(key, item)
           when :position then          html << typus_table_position_field(key, item)
-          when :has_and_belongs_to_many then
+          when :has_many || :has_and_belongs_to_many then
             html << typus_table_has_and_belongs_to_many_field(key, item)
           else
             html << typus_table_string_field(key, item, link_options)
